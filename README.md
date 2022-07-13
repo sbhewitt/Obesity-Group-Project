@@ -8,3 +8,5 @@ The prompts are there to help jump-start your ideation process. If you would lik
 
 Remember to start with a good problem statement!
 
+## Problem Statement
+Obesity is an issue that affects people worldwide. While there are many factors that affect obesity rates, this project will utilize lifestyle survey data to predict if somebody is obese, and give personalized recommendations based on the factors that most contribute to their obesity.
