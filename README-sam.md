@@ -14,8 +14,21 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 
 Data:
 * [`survey.csv`](./data/survey.csv): Dataset of Survey Results for Obesity in Mexico, Peru and Columbia from 2019 [source](https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+) 
+* [`cleaned_cdc.csv`](./data/cleaned_cdc.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
 
+####  Data Dictionary
 
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**Year**|*int*|CDC|Year data collected|
+|**LocationAbbr**|*str*|CDC|State Abbreviation|
+|**LocationDesc**|*str*|CDC|State Name|
+|**Data_Value**|*float*|CDC|Percentage of people with obesity|
+|**Sample_Size**|*float*|CDC|Survey sample size|
+|**GeoLocation**|*tuple*|CDC|Latitude and Longitude of State|
+|**QuestionID**|*str*|CDC|ID for Questions|
+|**StratificationCategoryId1**|*str*|CDC|Category ID for Stratifications|
+|**StratificationID1**|*str*|CDC|Stratification ID|
 
 ## To Do: Format Questions into Table and Update Column names
 

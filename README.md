@@ -16,22 +16,83 @@ Data:
 * [`survey.csv`](./data/survey.csv): Dataset of Survey Results for Obesity in Mexico, Peru and Columbia from 2019 [source](https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+) 
 * [`cleaned_cdc.csv`](./data/cleaned_cdc.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
 
-####  Data Dictionary
-
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|**Year**|*int*|Year data collected|CDC|
-|**LocationAbbr**|*str*|State Abbreviation|CDC|
-|**LocationDesc**|*str*|State Name|CDC|
-|**Data_Value**|*float*|Percentage of people with obesity|CDC|
-|**Sample_Size**|*float*|Survey sample size|CDC|
-|**GeoLocation**|*tuple*|Latitude and Longitude of State|CDC|
-|**QuestionID**|*str*|ID for Questions|CDC|
-|**StratificationCategoryId1**|*str*|Category ID for Stratifications|CDC|
-|**StratificationID1**|*str*|Stratification ID|CDC|
 
 #### Data Dictionary
 
+<<<<<<< HEAD
+
+Questions	Possible Answers
+¿What is your gender?	
+Female
+Male
+
+¿What is your age?	Numeric value
+
+¿What is your height?	Numeric value in meters
+
+¿What is your weight?	Numeric value in kilograms
+
+¿Has a family member suffered or suffers from overweight?	
+Yes
+No
+
+¿Do you eat high caloric food frequently?	
+Yes
+No
+
+¿Do you usually eat vegetables in your meals?	
+Never
+Sometimes
+Always
+
+¿How many main meals do you have daily?	
+Between 1 y 2
+Three
+More than three
+
+¿Do you eat any food between meals?	
+No
+Sometimes
+Frequently
+Always
+
+¿Do you smoke?	
+Yes
+No
+
+¿How much water do you drink daily?	
+Less than a liter
+Between 1 and 2 L
+More than 2 L
+
+¿Do you monitor the calories you eat daily?	
+Yes
+No
+
+¿How often do you have physical activity?	
+I do not have
+1 or 2 days
+2 or 4 days
+4 or 5 days
+
+¿How much time do you use technological devices such as cell phone, videogames, television, computer and others?	
+0–2 hours
+3–5 hours
+More than 5 hours
+
+¿how often do you drink alcohol?	
+I do not drink
+Sometimes
+Frequently
+Always
+
+¿Which transportation do you usually use?	
+Automobile
+Motorbike
+Bike
+Public Transportation
+Walking
+=======
 | Feature | Type  | Question | Responses |
 |------|------|--------|---------|
 |Gender | category (one-hot encoded) | ¿What is your gender? | Female / Male |
@@ -50,3 +111,4 @@ Data:
 |tech_use| category | ¿How much time do you use technological devices such as cell phone, videogames, television, computer and others? | 0-2 hours / 3-5 hours / More than 5 hours |
 |alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
+>>>>>>> 2aaf74b32ed1f7d1c88481ab8379e3e269c9a8be
