@@ -30,76 +30,23 @@ Data:
 |**StratificationCategoryId1**|*str*|Category ID for Stratifications|CDC|
 |**StratificationID1**|*str*|Stratification ID|CDC|
 
-## To Do: Format Questions into Table and Update Column names
+#### Data Dictionary
 
-Questions	Possible Answers
-¿What is your gender?	
-Female
-Male
-
-¿What is your age?	Numeric value
-
-¿What is your height?	Numeric value in meters
-
-¿What is your weight?	Numeric value in kilograms
-
-¿Has a family member suffered or suffers from overweight?	
-Yes
-No
-
-¿Do you eat high caloric food frequently?	
-Yes
-No
-
-¿Do you usually eat vegetables in your meals?	
-Never
-Sometimes
-Always
-
-¿How many main meals do you have daily?	
-Between 1 y 2
-Three
-More than three
-
-¿Do you eat any food between meals?	
-No
-Sometimes
-Frequently
-Always
-
-¿Do you smoke?	
-Yes
-No
-
-¿How much water do you drink daily?	
-Less than a liter
-Between 1 and 2 L
-More than 2 L
-
-¿Do you monitor the calories you eat daily?	
-Yes
-No
-
-¿How often do you have physical activity?	
-I do not have
-1 or 2 days
-2 or 4 days
-4 or 5 days
-
-¿How much time do you use technological devices such as cell phone, videogames, television, computer and others?	
-0–2 hours
-3–5 hours
-More than 5 hours
-
-¿how often do you drink alcohol?	
-I do not drink
-Sometimes
-Frequently
-Always
-
-¿Which transportation do you usually use?	
-Automobile
-Motorbike
-Bike
-Public Transportation
-Walking
+| Feature | Type  | Question | Responses |
+|------|------|--------|---------|
+|Gender | category (one-hot encoded) | ¿What is your gender? | Female / Male |
+|Age | object | ¿What is your age? | Numeric Value (years) |
+|Height | object | ¿What is your height? | Numeric Value (meters) |
+|Weight | object | ¿What is your weight? | Numeric Value (kg) |
+|fam_hx_overweight | category | ¿Has a family member suffered or suffers from overweight? | Yes / No |
+|high_cal_foods| category | ¿Do you eat high caloric food frequently? | Yes / No |
+|vegetables| category | ¿Do you usually eat vegetables in your meals?| Never / Sometimes / Always |
+|main_meals| object | ¿How many main meals do you have daily?| Numeric Value |
+|food_bw_meals| category (one-hot encoded) | ¿Do you eat any food between meals? | No / Sometimes / Frequently / Always |
+|smoke| category | ¿Do you smoke? | Yes / No |
+|H2O| category | ¿How much water do you drink daily? | Less than a liter / Between 1 and 2 L / More than 2 L |
+|monitor_cals| category | ¿Do you monitor the calories you eat daily? | Yes / No |
+|physical_activity| category | ¿How often do you have physical activity? | None / 1 to 2 days / 2 to 4 days / 4 or more days |
+|tech_use| category | ¿How much time do you use technological devices such as cell phone, videogames, television, computer and others? | 0-2 hours / 3-5 hours / More than 5 hours |
+|alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
+|transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
