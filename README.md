@@ -16,21 +16,9 @@ Data:
 * [`survey.csv`](./data/survey.csv): Dataset of Survey Results for Obesity in Mexico, Peru and Columbia from 2019 [source](https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+) 
 * [`cleaned_cdc.csv`](./data/cleaned_cdc.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
 
-####  Data Dictionary
-
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|**Year**|*int*|Year data collected|CDC|
-|**LocationAbbr**|*str*|State Abbreviation|CDC|
-|**LocationDesc**|*str*|State Name|CDC|
-|**Data_Value**|*float*|Percentage of people with obesity|CDC|
-|**Sample_Size**|*float*|Survey sample size|CDC|
-|**GeoLocation**|*tuple*|Latitude and Longitude of State|CDC|
-|**QuestionID**|*str*|ID for Questions|CDC|
-|**StratificationCategoryId1**|*str*|Category ID for Stratifications|CDC|
-|**StratificationID1**|*str*|Stratification ID|CDC|
 
 ## To Do: Format Questions into Table and Update Column names
+
 
 Questions	Possible Answers
 ¿What is your gender?	
