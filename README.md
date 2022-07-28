@@ -85,6 +85,7 @@ Motorbike
 Bike
 Public Transportation
 Walking
+
 =======
 | Feature | Type  | Question | Responses |
 |------|------|--------|---------|
