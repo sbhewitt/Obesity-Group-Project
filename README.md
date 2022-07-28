@@ -112,12 +112,3 @@ Walking
 |tech_use| category | ¿How much time do you use technological devices such as cell phone, videogames, television, computer and others? | 0-2 hours / 3-5 hours / More than 5 hours |
 |alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
-
-
-### Images
-
-![us_obesity](https://media.git.generalassemb.ly/user/43456/files/98bdc1db-0b3e-412e-98cf-ea4a804aa9fc)
-A heatmap of the United States showing obesity rates by state.
-
-![rfr_feat_importances](https://media.git.generalassemb.ly/user/43456/files/0a0b28bc-4b70-47d8-9bc3-8b25730860e3)
-Feature importances of Random Forest Regression model for predicting weight using survey data.
