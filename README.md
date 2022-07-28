@@ -40,7 +40,7 @@ The goal of the regression model was to predict a person's weight based upon the
 
 ### CDC Regression Model:
 
-The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8.  
+The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8 with a mean squared error of 6.46. The r2 for the training and testing sets were .670 and .592 respectively.  
 
 ## Conclusion:
 
