@@ -97,13 +97,13 @@ Walking
 | Feature | Type  | Question | Responses |
 |------|------|--------|---------|
 |Gender | category (one-hot encoded) | ¿What is your gender? | Female / Male |
-|Age | object | ¿What is your age? | Numeric Value (years) |
-|Height | object | ¿What is your height? | Numeric Value (meters) |
-|Weight | object | ¿What is your weight? | Numeric Value (kg) |
+|Age | float | ¿What is your age? | Numeric Value (years) |
+|Height | float | ¿What is your height? | Numeric Value (meters) |
+|Weight | float | ¿What is your weight? | Numeric Value (kg) |
 |fam_hx_overweight | category | ¿Has a family member suffered or suffers from overweight? | Yes / No |
 |high_cal_foods| category | ¿Do you eat high caloric food frequently? | Yes / No |
 |vegetables| category | ¿Do you usually eat vegetables in your meals?| Never / Sometimes / Always |
-|main_meals| object | ¿How many main meals do you have daily?| Numeric Value |
+|main_meals| int | ¿How many main meals do you have daily?| Numeric Value |
 |food_bw_meals| category (one-hot encoded) | ¿Do you eat any food between meals? | No / Sometimes / Frequently / Always |
 |smoke| category | ¿Do you smoke? | Yes / No |
 |H2O| category | ¿How much water do you drink daily? | Less than a liter / Between 1 and 2 L / More than 2 L |
@@ -112,4 +112,12 @@ Walking
 |tech_use| category | ¿How much time do you use technological devices such as cell phone, videogames, television, computer and others? | 0-2 hours / 3-5 hours / More than 5 hours |
 |alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
->>>>>>> 2aaf74b32ed1f7d1c88481ab8379e3e269c9a8be
+
+
+### Images
+
+![us_obesity](https://media.git.generalassemb.ly/user/43456/files/98bdc1db-0b3e-412e-98cf-ea4a804aa9fc)
+A heatmap of the United States showing obesity rates by state.
+
+![rfr_feat_importances](https://media.git.generalassemb.ly/user/43456/files/0a0b28bc-4b70-47d8-9bc3-8b25730860e3)
+Feature importances of Random Forest Regression model for predicting weight using survey data.
