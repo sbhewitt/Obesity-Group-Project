@@ -22,13 +22,13 @@ Data:
 | Feature | Type  | Question | Responses |
 |------|------|--------|---------|
 |Gender | category (one-hot encoded) | ¿What is your gender? | Female / Male |
-|Age | object | ¿What is your age? | Numeric Value (years) |
-|Height | object | ¿What is your height? | Numeric Value (meters) |
-|Weight | object | ¿What is your weight? | Numeric Value (kg) |
+|Age | float | ¿What is your age? | Numeric Value (years) |
+|Height | float | ¿What is your height? | Numeric Value (meters) |
+|Weight | float | ¿What is your weight? | Numeric Value (kg) |
 |fam_hx_overweight | category | ¿Has a family member suffered or suffers from overweight? | Yes / No |
 |high_cal_foods| category | ¿Do you eat high caloric food frequently? | Yes / No |
 |vegetables| category | ¿Do you usually eat vegetables in your meals?| Never / Sometimes / Always |
-|main_meals| object | ¿How many main meals do you have daily?| Numeric Value |
+|main_meals| int | ¿How many main meals do you have daily?| Numeric Value |
 |food_bw_meals| category (one-hot encoded) | ¿Do you eat any food between meals? | No / Sometimes / Frequently / Always |
 |smoke| category | ¿Do you smoke? | Yes / No |
 |H2O| category | ¿How much water do you drink daily? | Less than a liter / Between 1 and 2 L / More than 2 L |
