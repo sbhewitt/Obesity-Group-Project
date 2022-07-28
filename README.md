@@ -31,3 +31,22 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 |tech_use| category | ¿How much time do you use technological devices such as cell phone, videogames, television, computer and others? | 0-2 hours / 3-5 hours / More than 5 hours |
 |alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
+
+## Modeling:
+
+### Survey Regression Model:
+
+The goal of the regression model was to predict a person's weight based upon their answers in the survey. The best performing model was random forest. Feature engineering was performed by creating 2nd degree polynomial features on height, high_cal_foods, vegetables, main_meals, and h2o columns. This model had a mean squared error of 94.9 and a training and testing r2 score of .987 and .866 respectively.
+
+### CDC Regression Model:
+
+The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8.  
+
+## Conclusion:
+
+Daily Exercise and a Healthy diet are obvious ways to reduce obesity, but simple lifestyle changes such as biking or walking to work (if possible), or monitoring the calories you eat can help manage your weight.
+
+
+## Next Steps:
+
+We could improve our results with more data points, our survey had over 2000 responses, but our models and predictions would have been better with more data.
