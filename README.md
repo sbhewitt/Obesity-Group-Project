@@ -111,16 +111,17 @@ The goal of the regression model was to predict a person's weight based upon the
 ### Survey Classification Models:
 
 For our classifications models, we set up two separate models. The first was just to determine whether a person was overweight/obese or not. For this classification, our best model was a RandomForest model, with an accuracy score of .930 for the test data set. Although the model might appear to be overfit (the training accuracy was 1.0), the RandomForest model had the best test accuracy and the fewest miscategorized predictions. Therefore, we chose this as our production model. Our second classification model was a multiclass model, where we split up our categories into 4 classes: Underweight, Normal Weight, Overweight, and Obese. Similar to our first model, the RandomForest model had our best accuracy, with a test score of .881. This model also had some issues with overfitting, but again the test score was much better than any of the other models, so we chose this RandomForest model as our production model.
-
-### CDC Regression Model:
-
-The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8 with a mean squared error of 6.46. The r2 for the training and testing sets were .670 and .592 respectively.  
+  
 
 ### Survey KMeans Clustering:
 
 ![plot](./images/age_v_bmi_cluster.png)
 
 The goal of KMeans clustering was to find different clusters of data correlating age to BMI (Body Mass Index). The largest silhouette score was of 0.494 occured at 3 clusters.
+
+### CDC Regression Model:
+
+The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8 with a mean squared error of 6.46. The r2 for the training and testing sets were .670 and .592 respectively.
 
 
 ## Conclusion:
