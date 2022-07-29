@@ -37,12 +37,13 @@ Data:
 |**Q036**|Percent of adults aged 18 years and older who have obesity|CDC|
 |**Q037**|Percent of adults aged 18 years and older who have an overweight classification|CDC|
 |**Q047**|Percent of adults who engage in no leisure-time physical activity|CDC|
-|**Q019**|Percent of adults who report consuming vegetables less than one time daily|CDC|
 |**Q046**|Percent of adults who engage in muscle-strengthening activities on 2 or more days a week|CDC|
 |**Q043**|Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)|CDC|
 |**Q044**|Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week|CDC|
 |**Q045**|Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)|CDC|
 |**Q018**|Percent of adults who report consuming fruit less than one time daily|CDC|
+|**Q019**|Percent of adults who report consuming vegetables less than one time daily|CDC|
+
 
 # CDC Stratification Data Dictionary
 
@@ -67,7 +68,7 @@ Data:
 |**Income**|$75,000 or greater|INC|INC75PLUS|CDC|
 |**Income**|Data not reported|INC|INCNR|CDC|
 |**Race/Ethnicity**|2 or more races|RACE|RACE2PLUS|CDC|
-|**Race/Ethnicity**|ASIAN|RACE|RACEASN|CDC||
+|**Race/Ethnicity**|Asian|RACE|RACEASN|CDC||
 |**Race/Ethnicity**|Non-Hispanic Black|RACE|RACEBLK|CDC|
 |**Race/Ethnicity**|Hispanic|RACE|RACEHIS|CDC|
 |**Race/Ethnicity**|Hawaiian/Pacific Islander|RACE|RACEHPI|CDC|
