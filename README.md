@@ -5,12 +5,15 @@
 Obesity is an issue that affects people worldwide. While there are many factors that affect obesity rates, this project will utilize lifestyle survey data to predict if somebody is obese, and give personalized recommendations based on the factors that most contribute to their obesity.
 
 ## Data:
+The data used for this project was taken from the following datasets:
 * [`survey.csv`](./data/survey.csv): Dataset of Survey Results for Obesity in Mexico, Peru and Columbia from 2019 [source](https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+) 
 * [`cleaned_cdc_2020.csv`](./data/cleaned_cdc_2020.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
 
+## Software Requirements:
+All data cleaning and modeling was run in Python using the following libraries:
+Pandas, skLearn, matplotlib, Seaborn, & Geopandas
 
-
-#### Data Dictionary
+## Data Dictionary
 
 =======
 | Feature | Type  | Question | Responses |
@@ -33,7 +36,7 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
 
 
-# CDC Data Dictionary
+### CDC Data Dictionary
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
@@ -48,7 +51,7 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 |**StratificationID1**|*str*|CDC|Stratification ID|
 
 
-# CDC Question Data Dictionary
+### CDC Question Data Dictionary
 
 |QuestionID|Question|Dataset|
 |---|---|---|
@@ -64,7 +67,7 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 
 
 
-# CDC Stratification Data Dictionary
+### CDC Stratification Data Dictionary
 
 |StratificationCategory1|Stratification1|StratificationCategoryID1|StratificationID1|Dataset|
 |---|---|---|---|---|
@@ -103,6 +106,10 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 
 The goal of the regression model was to predict a person's weight based upon their answers in the survey. The best performing model was random forest. Feature engineering was performed by creating 2nd degree polynomial features on height, high_cal_foods, vegetables, main_meals, and h2o columns. This model had a mean squared error of 94.9 and a training and testing r2 score of .987 and .866 respectively.
 
+### Survey Classification Models:
+
+For our classifications models, we set up two separate models. The first was just to determine whether a person was overweight/obese or not. For this classification, our best model was a RandomForest model, with an accuracy score of .930 for the test data set. Although the model might appear to be overfit (the training accuracy was 1.0), the RandomForest model had the best test accuracy and the fewest miscategorized predictions. Therefore, we chose this as our production model. Our second classification model was a multiclass model, where we split up our categories into 4 classes: Underweight, Normal Weight, Overweight, and Obese. Similar to our first model, the RandomForest model had our best accuracy, with a test score of .881. This model also had some issues with overfitting, but again the test score was much better than any of the other models, so we chose this RandomForest model as our production model.
+
 ### CDC Regression Model:
 
 The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8 with a mean squared error of 6.46. The r2 for the training and testing sets were .670 and .592 respectively.  
@@ -116,9 +123,9 @@ The goal of KMeans clustering was to find different clusters of data correlating
 
 ## Conclusion:
 
-Daily Exercise and a Healthy diet are obvious ways to reduce obesity, but simple lifestyle changes such as biking or walking to work (if possible), or monitoring the calories you eat can help manage your weight.
+Daily Exercise and a Healthy diet are obvious ways to reduce obesity, but simple lifestyle changes such as biking or walking to work (if possible), drinking less alcohol, or monitoring the calories you eat can help manage your weight.
 
 
 ## Next Steps:
 
-We could improve our results with more data points, our survey had over 2000 responses, but our models and predictions would have been better with more data.
+We could improve our results with more data points, our survey had over 2000 responses, but our models and predictions would have been better with more data. Additionally, our CDC data set had many null values that made modeling difficult, and all the values were percent based.
