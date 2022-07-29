@@ -1,4 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 5: Group Project
+
 ### By: Ryan Pedersen, Rick Powell, Samuel Hewitt
 
 ## Problem Statement
@@ -16,6 +17,7 @@ Pandas, skLearn, matplotlib, Seaborn, & Geopandas
 ## Data Dictionaries
 
 ### Survey Data Dictionary
+
 | Feature | Type  | Question | Responses |
 |------|------|--------|---------|
 |Gender | category (one-hot encoded) | ¿What is your gender? | Female / Male |
