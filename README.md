@@ -6,7 +6,7 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 
 ## Data:
 * [`survey.csv`](./data/survey.csv): Dataset of Survey Results for Obesity in Mexico, Peru and Columbia from 2019 [source](https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+) 
-* [`cleaned_cdc.csv`](./data/cleaned_cdc.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
+* [`cleaned_cdc_2020.csv`](./data/cleaned_cdc_2020.csv): CDC Dataset of adult's diet, physical activity, and weight status from Behavioral Risk Factor Surveillance System. [source](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7) 
 
 
 
@@ -32,6 +32,71 @@ Obesity is an issue that affects people worldwide. While there are many factors 
 |alcohol| category (one-hot encoded) | ¿how often do you drink alcohol? | I do not drink / Sometimes / Frequently / Always |
 |transport| category (one-hot encoded) | ¿Which transportation do you usually use? | Automobile / Motorbike / Bike / Public Transportation / Walking |
 
+
+# CDC Data Dictionary
+
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**Year**|*int*|CDC|Year data collected|
+|**LocationAbbr**|*str*|CDC|State Abbreviation|
+|**LocationDesc**|*str*|CDC|State Name|
+|**Data_Value**|*float*|CDC|Percentage of people with obesity|
+|**Sample_Size**|*float*|CDC|Survey sample size|
+|**GeoLocation**|*tuple*|CDC|Latitude and Longitude of State|
+|**QuestionID**|*str*|CDC|ID for Questions|
+|**StratificationCategoryId1**|*str*|CDC|Category ID for Stratifications|
+|**StratificationID1**|*str*|CDC|Stratification ID|
+
+
+# CDC Question Data Dictionary
+
+|QuestionID|Question|Dataset|
+|---|---|---|
+|**Q036**|Percent of adults aged 18 years and older who have obesity|CDC|
+|**Q037**|Percent of adults aged 18 years and older who have an overweight classification|CDC|
+|**Q047**|Percent of adults who engage in no leisure-time physical activity|CDC|
+|**Q046**|Percent of adults who engage in muscle-strengthening activities on 2 or more days a week|CDC|
+|**Q043**|Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)|CDC|
+|**Q044**|Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week|CDC|
+|**Q045**|Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)|CDC|
+|**Q018**|Percent of adults who report consuming fruit less than one time daily|CDC|
+|**Q019**|Percent of adults who report consuming vegetables less than one time daily|CDC|
+
+
+
+# CDC Stratification Data Dictionary
+
+|StratificationCategory1|Stratification1|StratificationCategoryID1|StratificationID1|Dataset|
+|---|---|---|---|---|
+|**Age(years)**|18 - 24|AGEYR|AGEYR1824|CDC|
+|**Age(years)**|25 - 34|AGEYR|AGEYR2534|CDC|
+|**Age(years)**|35 - 44|AGEYR|AGEYR3544|CDC|
+|**Age(years)**|45 - 54|AGEYR|AGEYR4554|CDC|
+|**Age(years)**|55 - 64|AGEYR|AGEYR5564|CDC|
+|**Age(years)**|65 or older|AGEYR|AGEYR65PLUS|CDC|
+|**Education**|College graduate|EDU|EDUCOGRAD|CDC|
+|**Education**|Some college or technical school|EDU|EDUCOTEC|CDC|
+|**Education**|Less than high school|EDU|EDUHS|CDC|
+|**Education**|High school graduate |EDU|EDUHSGRAD|CDC|
+|**Gender**|Female|GEN|FEMALE|CDC|
+|**Gender**|Male|GEN|MALE|CDC|
+|**Income**|$15,000 - $24,999|INC|INC1525|CDC|
+|**Income**|$25,000 - $34,999|INC|INC2535|CDC|
+|**Income**|$35,000 - $49,999|INC|INC3550|CDC|
+|**Income**|$50,000 - $74,999|INC|INC5075|CDC|
+|**Income**|$75,000 or greater|INC|INC75PLUS|CDC|
+|**Income**|Data not reported|INC|INCNR|CDC|
+|**Race/Ethnicity**|2 or more races|RACE|RACE2PLUS|CDC|
+|**Race/Ethnicity**|Asian|RACE|RACEASN|CDC||
+|**Race/Ethnicity**|Non-Hispanic Black|RACE|RACEBLK|CDC|
+|**Race/Ethnicity**|Hispanic|RACE|RACEHIS|CDC|
+|**Race/Ethnicity**|Hawaiian/Pacific Islander|RACE|RACEHPI|CDC|
+|**Race/Ethnicity**|American Indian/Alaska Native|RACE|RACENAA|CDC|
+|**Race/Ethnicity**|Other|RACE|RACEOTH|CDC|
+|**Race/Ethnicity**|Non-Hispanic White |RACE|RACEWHT|CDC|
+|**Total**|Total|OVR|OVERALL|CDC|
+
+
 ## Modeling:
 
 ### Survey Regression Model:
@@ -41,6 +106,13 @@ The goal of the regression model was to predict a person's weight based upon the
 ### CDC Regression Model:
 
 The goal of the regression model was to predict a state's obesity percentage based on diet and exercise habits. The best performing model was knn with n = 8 with a mean squared error of 6.46. The r2 for the training and testing sets were .670 and .592 respectively.  
+
+### Survey KMeans Clustering:
+
+![plot](./images/age_v_bmi_cluster.png)
+
+The goal of KMeans clustering was to find different clusters of data correlating age to BMI (Body Mass Index). The largest silhouette score was of 0.494 occured at 3 clusters.
+
 
 ## Conclusion:
 
